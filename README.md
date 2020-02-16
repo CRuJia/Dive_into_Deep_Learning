@@ -21,7 +21,7 @@
   - 常用的分词工具（Spacy，NLTK）
   - [ ] 看Spacy,NLTK 文档
   
-  2020.2.15
+  2020.2.14
   
  #### 5.[语言模型（基于统计的语言模型）](https://github.com/CRuJia/Dive_into_Deep_Learning/blob/master/5.%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%95%B0%E6%8D%AE%E9%9B%86.ipynb)
  
@@ -44,13 +44,46 @@
  - 梯度裁剪：应对梯度爆照，设置阈值 $\theta$,裁剪后的梯度的L2范式不超过$\theta$
  - 困惑度：困惑度是对交叉熵损失函数做指数运算后得到的值,任何一个有效模型的困惑度必须小于类别个数
  
+ 2020.2.15
+ 
  #### 7.[过拟合、欠拟合及解决方案](https://github.com/CRuJia/Dive_into_Deep_Learning/blob/master/7.%E8%BF%87%E6%8B%9F%E5%90%88%E6%AC%A0%E6%8B%9F%E5%90%88%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.ipynb)
  
  - 权重衰减对过拟合现象有效：添加L2正则化项
  - Dropout
  
- #### 8
+ 2020.02.16
  
+ #### 8.[梯度消失、梯度爆炸](https://github.com/CRuJia/Dive_into_Deep_Learning/blob/master/8.%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E3%80%81%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8.ipynb)
  
+ - 随机初始化参数模型
  
- 
+ - [ ] Xavier随机初始化
+ 它的设计主要考虑到，模型参数初始化后，每层输出的方差不该受该层输入个数影响，且每层梯度的方差也不该受该层输出个数影响。
+
+- 斜变量偏移、标签偏移、概念偏移
+
+
+模型训练步骤：
+1、获取数据集
+2、数据预处理(标准化)
+3、模型设计
+4、模型验证和模型调整（调参）
+5、模型预测及提交
+
+- [ ] kaggle房价预测
+
+ #### 9.[RNN进阶](https://github.com/CRuJia/Dive_into_Deep_Learning/blob/master/9.ModernRNN.ipynb) 
+
+- GRU   
+重置门有助于捕捉时间序列里短期的依赖关系;  
+更新门有助于捕捉时间序列里长期的依赖关系。
+
+- LSTM  
+遗忘门:控制上一时间步的记忆细胞 
+输入门:控制当前时间步的输入  
+输出门:控制从记忆细胞到隐藏状态  
+记忆细胞：⼀种特殊的隐藏状态的信息的流动  
+
+ #### 10.[CNN基础](https://github.com/CRuJia/Dive_into_Deep_Learning/blob/master/10.%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80.ipynb)
+
+- 卷积、池化
